@@ -59,7 +59,7 @@ public class bankCustomer {
 
         //mainPage mp = new mainPage();
 
-        String index1 = "";
+        String index1 = null;
 
         if(custId.equals(cID)){
 
@@ -67,7 +67,7 @@ public class bankCustomer {
 
         }
 
-        return (custId);
+        return (index1);
 
     }
 
