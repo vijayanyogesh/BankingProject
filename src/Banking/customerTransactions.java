@@ -21,9 +21,11 @@ public class customerTransactions extends bankCustomer {
     }
 
 
-    public void custCredit(long amount){
+    public long custCredit(long amount,String custid,long accno,long balance){
 
-        custacc.setAccBalance((custacc.getAccBalance() + amount));
+        balance = balance + amount;
+
+        return balance;
 
     }
 

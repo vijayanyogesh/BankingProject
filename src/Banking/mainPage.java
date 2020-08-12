@@ -7,8 +7,6 @@ import java.util.Scanner;
 
 public class mainPage {
 
-
-
     public static void main(String args[]){
 
         // Create bankcust object
@@ -119,13 +117,17 @@ public class mainPage {
 
                                 if(test){
 
+                                    //get the balance for the cust_id and accnumber
                                     long balance = acct[ix].getAccBalance(cust_id,accnumber);
 
+                                    //after deduction set the balance
                                     balance = custtrans.custDebit(debit,cust_id,accnumber,balance);
 
+                                    //set the balance back
                                     acct[ix].setAccBalance(balance);
 
-                                    System.out.println(acct[ix].getAccBalance());
+                                    System.out.println(acct[ix].getAccBalance() +  " " +
+                                            acct[ix].getAccType());
 
                                     break;
 
@@ -143,12 +145,35 @@ public class mainPage {
                         case 2:
 
                             //call deposit
+
+                            //call withdraw
+
+                            System.out.println("Enter Amount to Deposit");
                             long credit = scan.nextLong();
+                            boolean test1 = false;
 
-                            custtrans.custCredit(credit);
+                            for(int ix = 0; ix < j;ix++){
 
+                                test1 = acct[ix].searchAcct(cust_id,accnumber);
 
-                            //update transaction
+                                //System.out.println("inside for loop");
+
+                                if(test1){
+
+                                    long balance = acct[ix].getAccBalance(cust_id,accnumber);
+
+                                    balance = custtrans.custCredit(credit,cust_id,accnumber,balance);
+
+                                    acct[ix].setAccBalance(balance);
+
+                                    System.out.println(acct[ix].getAccBalance());
+
+                                    break;
+
+                                }
+
+                            }
+
 
                             break;
 
