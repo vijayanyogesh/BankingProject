@@ -4,26 +4,40 @@ import java.util.Date;
 
 public class customerTransactions extends bankCustomer {
 
-
     private long transactionId;
     private Date date;
     private String custIdacc;
     private long accType;
     private long accNo;
+    private long acctbalance;
 
     customerAccount custacc = new customerAccount();
 
-    public long custDebit(long amount,String custid,long accno,long balance){
+    public long custDebit(long amount,String custid,long accno,long balance,int transId){
 
         balance = balance - amount;
+
+        createTransaction(custid,accno,balance,transId);
 
         return balance;
     }
 
+    public void createTransaction(String custid,long accno,long balance,int transId){
 
-    public long custCredit(long amount,String custid,long accno,long balance){
+        this.acctbalance = balance;
+        this.accNo = accno;
+        this.custIdacc = custid;
+        this.transactionId = transId;
+
+        System.out.println("in create");
+    }
+
+
+    public long custCredit(long amount,String custid,long accno,long balance,int transId){
 
         balance = balance + amount;
+
+        createTransaction(custid,accno,balance,transId);
 
         return balance;
 

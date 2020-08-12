@@ -40,7 +40,7 @@ public class goldMember extends bankCustomer {
         System.out.println(gold.getName());
         System.out.println(gold.rewardPoints);
 
-        gold.approvedLoan();
+        //gold.approvedLoan();
 
         System.out.println("Loan Amount " );
 

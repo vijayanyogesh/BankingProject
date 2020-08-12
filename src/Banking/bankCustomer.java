@@ -39,8 +39,6 @@ public class bankCustomer {
 
     public bankCustomer(String new_name, int new_age, String new_gender,
                         String aadharNo, long custId, long accountNo, long balance) {
-
-
     }
 
     //update method
@@ -56,19 +54,13 @@ public class bankCustomer {
 
     //Search for customer
     public boolean searchCust(String cID){
-
-        //mainPage mp = new mainPage();
-
         String index1 = null;
 
         if(custId.equals(cID)){
 
             return (true);
-
         }
-
         return (false);
-
     }
 
     //return custId
@@ -78,25 +70,13 @@ public class bankCustomer {
         if(custId.equals(cID)){
             return custId;
         }
-
         return ("sad time");
-
     }
-
-
-
 
     //Method to Display customer
     public void display(){
 
        System.out.println(name + age + gender + phoneNo);
-
-
-    }
-
-    public void approvedLoan(){
-
-        //this.loanAmount = 10000;
 
     }
 
@@ -125,12 +105,9 @@ public class bankCustomer {
 
         this.index = index;
 
-
-
     }
 
-
-    //-------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------//
     //Getter and Setter Methods
     //Getter and Setters
 
@@ -181,9 +158,5 @@ public class bankCustomer {
     public void setCustId(String custId) {
         this.custId = custId;
     }
-
-
-
-
 
 }
