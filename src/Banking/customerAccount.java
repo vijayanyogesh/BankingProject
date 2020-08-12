@@ -32,6 +32,37 @@ public class customerAccount extends bankCustomer {
     }
 
 
+    public boolean searchAcct(String cID,long acctNum){
+
+        //mainPage mp = new mainPage();
+
+        String index1 = null;
+
+        if(custId.equals(cID) && (acctNumber == acctNum) ){
+
+            return (true);
+
+        }
+
+        return (false);
+
+    }
+
+    //return balance overloaded method
+    public long getAccBalance(String cID,long acctNum) {
+
+        if(custId.equals(cID) && (acctNumber == acctNum) ){
+
+            return (accBalance);
+
+        }
+
+
+        return 0;
+    }
+
+
+
 
     public String getAccType() {
         return accType;

@@ -9,13 +9,15 @@ public class customerTransactions extends bankCustomer {
     private Date date;
     private String custIdacc;
     private long accType;
+    private long accNo;
 
     customerAccount custacc = new customerAccount();
 
-    public void custDebit(long amount){
+    public long custDebit(long amount,String custid,long accno,long balance){
 
-        custacc.setAccBalance((custacc.getAccBalance() - amount));
+        balance = balance - amount;
 
+        return balance;
     }
 
 

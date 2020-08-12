@@ -8,7 +8,7 @@ public class testing {
 
         bankCustomer bc = new bankCustomer();
 
-        System.out.println(bc.details.size());
+        //System.out.println(bc.details.size());
 
     }
 

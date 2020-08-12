@@ -46,15 +46,57 @@ public class mainPage {
 
             if (option1 == 1) {
 
-                //int i =0;
-
                 do {
-                    System.out.println(" Please enter your Customer ID \n");
+                    byte flag = 0;
+                    String cust_id;
+                    long accnumber = 0;
+                    do {
+                        System.out.println(" Please enter your Customer ID \n");
+                        cust_id = scan.next();
+                        boolean found = false;
 
-                    int cust_id = scan.nextInt();
+                        for (int k = 0; k < i; k++) {
 
+                            //check if the entered custid exists if not throw error
 
+                            found = cust[k].searchCust(cust_id);
 
+                            if (found) {
+                                System.out.println("Party time");
+
+                                System.out.println("Enter Account Number");
+
+                                accnumber = scan.nextLong();
+
+                                boolean test = false;
+
+                                //checking if cust id and acc_number exists;
+
+                                /*for(int x = 0;x<j;x++){
+
+                                    test = acct[x].searchAcct(cust_id,accnumber);
+
+                                    if(test) {
+                                        System.out.println("found cid and accno");
+                                        accnumber = acct[x].getAcctNumber();
+                                        cust_id = acct[x].getCustId();
+                                        break;
+                                    }
+
+                                }*/
+
+                                flag = 1;
+
+                                break;
+                            } else {
+
+                                System.out.println("No Such ID enter again");
+                                break;
+                            }
+
+                        }
+
+                    }while(flag != 1);
                     System.out.println(" Select One of the Options \n ");
 
                     System.out.println(" (1) Withdraw \n (2) Deposit \n (3) Account Statement \n");
@@ -65,9 +107,35 @@ public class mainPage {
 
                             //call withdraw
 
+                            System.out.println("Enter Amount to withdraw");
                             long debit = scan.nextLong();
+                            boolean test = false;
 
-                            custtrans.custDebit(debit);
+                            for(int ix = 0; ix < j;ix++){
+
+                                test = acct[ix].searchAcct(cust_id,accnumber);
+
+                                //System.out.println("inside for loop");
+
+                                if(test){
+
+                                    long balance = acct[ix].getAccBalance(cust_id,accnumber);
+
+                                    balance = custtrans.custDebit(debit,cust_id,accnumber,balance);
+
+                                    acct[ix].setAccBalance(balance);
+
+                                    System.out.println(acct[ix].getAccBalance());
+
+                                    break;
+
+                                }
+
+                            }
+
+
+                            //System.out.println("i am here");
+
                             //update transaction
 
                             break;
@@ -145,11 +213,15 @@ public class mainPage {
 
                             for(int k = 0; k < i ; k++){
 
+                                //check if the entered custid exists if not throw error
+
                                 found = cust[k].searchCust(cust_id);
 
                                 if(found){
                                     System.out.println("Party time");
-                                    acct[j].addAccount(j,(cust[k].returnCust(cust_id)));
+
+                                    //call addaccount method from customer account
+                                    acct[j].addAccount(j,(cust[k].getCustId()));
 
                                     break;
                                 }else{
@@ -159,11 +231,7 @@ public class mainPage {
                                 }
 
                             }
-
-                            //call addaccount method from customer account
-
-
-
+                            j++;
                             break;
 
                         default:
@@ -181,7 +249,7 @@ public class mainPage {
 
         }while(option1 != 3);
 
-        for ( int x =0 ; x < cust.length ; x++ ){
+        for ( int x =0 ; x < i ; x++ ){
 
             cust[j].display();
 
