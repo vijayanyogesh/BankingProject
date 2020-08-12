@@ -15,7 +15,7 @@ public class bankCustomer {
 
     //customerAccount custacc = new customerAccount();
 
-    HashSet details = new HashSet();
+    //HashSet details = new HashSet();
 
     //Constructor - Initialize the variables
     public bankCustomer(){
@@ -55,7 +55,7 @@ public class bankCustomer {
     }
 
     //Search for customer
-    public String searchCust(String cID){
+    public boolean searchCust(String cID){
 
         //mainPage mp = new mainPage();
 
@@ -63,11 +63,23 @@ public class bankCustomer {
 
         if(custId.equals(cID)){
 
-            index1 = custId;
+            return (true);
 
         }
 
-        return (index1);
+        return (false);
+
+    }
+
+    //return custId
+
+    public String returnCust(String cID){
+
+        if(custId.equals(cID)){
+            return custId;
+        }
+
+        return ("sad time");
 
     }
 

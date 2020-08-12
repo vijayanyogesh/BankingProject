@@ -16,9 +16,9 @@ public class mainPage {
 
         customerTransactions custtrans = new customerTransactions();
 
-        bankCustomer C[] = new bankCustomer[20];
+        bankCustomer cust[] = new bankCustomer[20];
 
-        customerAccount a[] = new customerAccount[20];
+        customerAccount acct[] = new customerAccount[20];
 
 
         // Declare the option variable
@@ -28,6 +28,10 @@ public class mainPage {
 
         // Create a new scanner object
         Scanner scan = new Scanner(System.in);
+
+        int i = 0;
+
+        int j = 0;
 
         do {
 
@@ -42,7 +46,7 @@ public class mainPage {
 
             if (option1 == 1) {
 
-                int i =0;
+                //int i =0;
 
                 do {
                     System.out.println(" Please enter your Customer ID \n");
@@ -98,9 +102,7 @@ public class mainPage {
 
             } else if (option1 == 2) {
 
-                int i = 0;
 
-                int j = 0;
 
                 // if employee option is selected goes into here
                 do {
@@ -118,11 +120,11 @@ public class mainPage {
 
                         case 1:
 
-                            C[i] = new bankCustomer();
+                            cust[i] = new bankCustomer();
 
-                            C[i].createAccount(i);
+                            cust[i].createAccount(i);
 
-                            C[i].display();
+                            cust[i].display();
 
                             i++;
 
@@ -138,17 +140,28 @@ public class mainPage {
 
                             String cust_id = scan.next();
 
-                            a[j] = new customerAccount();
+                            acct[j] = new customerAccount();
+                            boolean found = false;
+
+                            for(int k = 0; k < i ; k++){
+
+                                found = cust[k].searchCust(cust_id);
+
+                                if(found){
+                                    System.out.println("Party time");
+                                    acct[j].addAccount(j,(cust[k].returnCust(cust_id)));
+
+                                    break;
+                                }else{
+
+                                    System.out.println("No Such ID enter again");
+                                    break;
+                                }
+
+                            }
 
                             //call addaccount method from customer account
 
-                            //String cid = C[j]
-
-                            a[j].addAccount(j,cust_id);
-
-                            System.out.println(bankcust.searchCust(cust_id));
-
-                            a[j].displayAccount();
 
 
                             break;
@@ -168,9 +181,9 @@ public class mainPage {
 
         }while(option1 != 3);
 
-        for ( int j =0 ; j < C.length ; j++ ){
+        for ( int x =0 ; x < cust.length ; x++ ){
 
-            C[j].display();
+            cust[j].display();
 
         }
 

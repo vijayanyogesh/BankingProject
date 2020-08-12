@@ -23,9 +23,6 @@ public class customerTransactions extends bankCustomer {
 
         custacc.setAccBalance((custacc.getAccBalance() + amount));
 
-
-
-
     }
 
     public long getTransactionId() {
@@ -49,7 +46,7 @@ public class customerTransactions extends bankCustomer {
     }
 
     public void setCustIdacc(long String) {
-        this.custIdacc = custIdacc;
+        this.custIdacc = custIdacc ;
     }
 
     public long getAccType() {

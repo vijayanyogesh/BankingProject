@@ -14,7 +14,7 @@ public class customerAccount extends bankCustomer {
 
     public void addAccount(int index,String custid){
 
-        custId = searchCust(custid);
+        custId = custid;
 
         Scanner scan = new Scanner(System.in);
 
