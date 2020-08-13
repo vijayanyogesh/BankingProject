@@ -11,16 +11,16 @@ public class mainPage {
 
         // Create bankcust object
         bankCustomer bankcust = new bankCustomer();
-
+        //transactions objects
         customerTransactions custtrans = new customerTransactions();
-
+        //object arrays for all the classes
         customerTransactions custra[] = new customerTransactions[20];
 
         bankCustomer cust[] = new bankCustomer[20];
 
         customerAccount acct[] = new customerAccount[20];
 
-        // Declare the option variable
+        // Declare the option variables
         byte option1;
         byte cust_option;
         byte emp_option;
@@ -28,6 +28,7 @@ public class mainPage {
         // Create a new scanner object
         Scanner scan = new Scanner(System.in);
 
+        //iterator variables for the object arrays
         int i = 0;
         int j = 0;
         int y = 0;
@@ -80,21 +81,21 @@ public class mainPage {
 
                     //}while(flag != 1);
                     System.out.println("Select One of the Options\n");
-
+                    //if customerid is correct choose one of the options
                     System.out.println("(1) Withdraw\n(2) Deposit\n(3) Account Statement\n(4) Exit");
 
                     cust_option = scan.nextByte();
                     switch (cust_option) {
                         case 1:
-                            //call withdraw
+                            //call withdraw method
                             System.out.println("Enter Amount to withdraw");
                             long debit = scan.nextLong();
                             boolean test = false;
-
+                            //create transaction array at yth location in array
                             custra[y] = new customerTransactions();
 
                             for(int ix = 0; ix < j;ix++){
-
+                                //call search method to check if account and accno exists pass true
                                 test = acct[ix].searchAcct(cust_id,accnumber);
 
                                 //System.out.println("inside for loop");
@@ -104,7 +105,7 @@ public class mainPage {
                                     //get the balance for the cust_id and accnumber
                                     long balance = acct[ix].getAccBalance(cust_id,accnumber);
 
-                                    //after deduction set the balance
+                                    //record the transaction and return new balance
                                     balance = custra[y].custDebit(debit,cust_id,accnumber,balance,transid);
 
                                     //set the balance back
@@ -118,7 +119,6 @@ public class mainPage {
                                 }
                             }
                             //System.out.println("i am here");
-                            //update transaction
                             break;
                         case 2:
                             //call deposit
@@ -150,26 +150,13 @@ public class mainPage {
                             }
                             break;
                         case 3:
-                            //call account statement
+                            //call Display accountstatement method recursively for
+                            //if the condition is met
 
                             //System.out.println(y);
                             for(int ac =0 ; ac < y ; ac++){
-
                                 custra[ac].getAccountStatement(cust_id,accnumber);
-
                             }
-
-
-
-
-
-                            //for(int h =0;  )
-
-
-                            /*System.out.println(custra[0].getTransactionId());
-                            System.out.println(custra[1].getTransactionId());*/
-
-
                             break;
                         default:
 
@@ -184,7 +171,7 @@ public class mainPage {
             } else if (option1 == 2) {
                 // if employee option is selected goes into here
                 do {
-
+                    //check if employee is valid(not done for now)
                     System.out.println("Please Enter your Employee ID\n");
 
                     System.out.println("Select One of the Options\n");
@@ -197,7 +184,7 @@ public class mainPage {
                     switch (emp_option) {
 
                         case 1:
-
+                            //create new object bankcustome at ith location and create an account
                             cust[i] = new bankCustomer();
 
                             cust[i].createAccount(i);
@@ -235,11 +222,9 @@ public class mainPage {
 
                                     break;
                                 }else{
-
                                     System.out.println("No Such ID enter again");
                                     break;
                                 }
-
                             }
                             j++;
                             break;

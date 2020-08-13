@@ -1,11 +1,13 @@
 package Banking;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.sql.Date;
+import java.time.format.DateTimeFormatter;
 
 public class customerTransactions extends bankCustomer {
 
     private long transactionId;
-    private Date date;
+    private LocalDate date;
     private String custIdacc;
     private long accType;
     private long accNo;
@@ -14,6 +16,7 @@ public class customerTransactions extends bankCustomer {
     private String transType;
     customerAccount custacc = new customerAccount();
 
+    //debit method get the parameters and passes them to createTransaction
     public long custDebit(long amount,String custid,long accno,long balance,int transId){
 
         this.transamount = amount;
@@ -25,13 +28,22 @@ public class customerTransactions extends bankCustomer {
 
         return balance;
     }
-
+    //createTransaction method to store all the details in the object
     public void createTransaction(String custid,long accno,long balance,int transId){
 
         this.acctbalance = balance;
         this.accNo = accno;
         this.custIdacc = custid;
         this.transactionId = transId;
+
+        long test = System.currentTimeMillis();
+        //this.date = new Date(test);
+        //System.out.println(date);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd");
+        LocalDate now = LocalDate.now();
+        this.date = now;
+        System.out.println(dtf.format(now));
 
         //System.out.println("in create");
     }
@@ -50,6 +62,8 @@ public class customerTransactions extends bankCustomer {
 
     }
 
+    //display method to print statement details if the custid and accno match
+
     public void getAccountStatement(String custId,long accno){
 
         if((this.custIdacc).equals(custId) && (this.accNo == accno) ){
@@ -63,20 +77,14 @@ public class customerTransactions extends bankCustomer {
 
     }
 
+    //----------------------getter and setter methods------------------------------------------------
+
     public long getTransactionId() {
         return transactionId;
     }
 
     public void setTransactionId(long transactionId) {
         this.transactionId = transactionId;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public String getCustIdacc() {

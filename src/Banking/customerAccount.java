@@ -11,7 +11,7 @@ public class customerAccount extends bankCustomer {
     private int index;
 
 
-
+    //method to add add acount to particular customer id
     public void addAccount(int index,String custid){
 
         custId = custid;
@@ -31,7 +31,7 @@ public class customerAccount extends bankCustomer {
 
     }
 
-
+    //search for the account with given account number and custid
     public boolean searchAcct(String cID,long acctNum){
 
         //mainPage mp = new mainPage();
@@ -54,15 +54,13 @@ public class customerAccount extends bankCustomer {
         if(custId.equals(cID) && (acctNumber == acctNum) ){
 
             return (accBalance);
-
         }
-
-
         return 0;
     }
 
 
-
+//-------------------------------------------------------------------------------------------------------------
+    //getter and setter methods
 
     public String getAccType() {
         return accType;
