@@ -88,3 +88,6 @@ local.properties
 
 .idea
 out
+*.xml
+/shelf/
+/workspace.xml
