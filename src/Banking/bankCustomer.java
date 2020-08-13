@@ -100,7 +100,7 @@ public class bankCustomer {
         System.out.println("Enter Aadhar Number");
         aadharNo = scan.next();
 
-        System.out.println("Enter Cust Id");
+        System.out.println("Generate New Cust Id");
         custId = scan.next();
 
         this.index = index;

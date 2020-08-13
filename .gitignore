@@ -87,7 +87,8 @@ local.properties
 #.project
 
 .idea
-out
+/out
 *.xml
 /shelf/
 /workspace.xml
+

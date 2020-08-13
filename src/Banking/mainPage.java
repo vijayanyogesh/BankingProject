@@ -68,8 +68,6 @@ public class mainPage {
 
                                 accnumber = scan.nextLong();
 
-                                boolean test = false;
-
                                 flag = 1;
 
                                 break;
@@ -112,6 +110,8 @@ public class mainPage {
                                     //set the balance back
                                     acct[ix].setAccBalance(balance);
 
+                                    System.out.println("Balance is " + acct[ix].getAccBalance());
+
                                     y++;
                                     transid++;
                                     break;
@@ -141,8 +141,8 @@ public class mainPage {
 
                                     acct[ix].setAccBalance(balance);
 
-                                    System.out.println(acct[ix].getAccBalance());
-                                    System.out.println(custra[0].getCustIdacc());
+                                    System.out.println("Balance is " + acct[ix].getAccBalance());
+
                                     y++;
                                     transid++;
                                     break;
@@ -152,9 +152,16 @@ public class mainPage {
                         case 3:
                             //call account statement
 
-                            System.out.println("Enter TransId");
+                            //System.out.println(y);
+                            for(int ac =0 ; ac < y ; ac++){
 
-                            int trans = scan.nextInt();
+                                custra[ac].getAccountStatement(cust_id,accnumber);
+
+                            }
+
+
+
+
 
                             //for(int h =0;  )
 
@@ -182,7 +189,7 @@ public class mainPage {
 
                     System.out.println("Select One of the Options\n");
 
-                    System.out.println("(1) Add Customer\n(2) Add Account to Existing Customer\n " +
+                    System.out.println("(1) Add Customer\n(2) Add Account to Existing Customer\n" +
                             "(3) Exit");
 
                     emp_option = scan.nextByte();

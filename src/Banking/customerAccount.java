@@ -21,10 +21,10 @@ public class customerAccount extends bankCustomer {
         System.out.println("Enter Account Type");
         accType = scan.next();
 
-        System.out.println("Enter Account Balance");
+        System.out.println("Enter Account Starting Balance");
         accBalance = scan.nextLong();
 
-        System.out.println("Enter Account Number");
+        System.out.println("Generate New Account Number");
         acctNumber = scan.nextLong();
 
         this.index = index;

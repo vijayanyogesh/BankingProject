@@ -15,9 +15,23 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85e2811-daec-411f-92c8-25fa34ce661a" name="Default Changelist" comment="updated gitignore -4">
+    <list default="true" id="b85e2811-daec-411f-92c8-25fa34ce661a" name="Default Changelist" comment="updated gitignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/bankCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/bankCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/createAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerCreate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerTransactions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerTransactions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/genericCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/goldCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/goldMember.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/mainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/mainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/silverCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banking/bankCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/bankCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banking/customerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/customerAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banking/customerTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/customerTransactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banking/mainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/mainPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597294454102</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated gitignore">
+      <created>1597295652308</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597295652308</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,30 +278,30 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="508" y="259" key="Github.ShareDialog/0.0.1280.720@0.0.1280.720" timestamp="1597163014841" />
-    <state width="1237" height="139" key="GridCell.Tab.0.bottom" timestamp="1597253968022">
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom" timestamp="1597301558024">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="139" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1597253968022" />
-    <state width="1237" height="139" key="GridCell.Tab.0.center" timestamp="1597253968022">
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1597301558024" />
+    <state width="1237" height="139" key="GridCell.Tab.0.center" timestamp="1597301558024">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="139" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1597253968022" />
-    <state width="1237" height="139" key="GridCell.Tab.0.left" timestamp="1597253968022">
+    <state width="1237" height="139" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1597301558024" />
+    <state width="1237" height="139" key="GridCell.Tab.0.left" timestamp="1597301558024">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="139" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1597253968022" />
-    <state width="1237" height="139" key="GridCell.Tab.0.right" timestamp="1597253968022">
+    <state width="1237" height="139" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1597301558024" />
+    <state width="1237" height="139" key="GridCell.Tab.0.right" timestamp="1597301558024">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="139" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1597253968022" />
+    <state width="1237" height="139" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1597301558024" />
     <state x="142" y="6" key="SettingsEditor" timestamp="1597294933947">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="6" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1597294933946" />
-    <state x="233" y="94" key="Vcs.Push.Dialog.v2" timestamp="1597294456053">
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2" timestamp="1597295661548">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="94" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1597294456053" />
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1597295661548" />
     <state x="93" y="93" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597162759641">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

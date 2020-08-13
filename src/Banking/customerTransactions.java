@@ -10,10 +10,14 @@ public class customerTransactions extends bankCustomer {
     private long accType;
     private long accNo;
     private long acctbalance;
-
+    private long transamount;
+    private String transType;
     customerAccount custacc = new customerAccount();
 
     public long custDebit(long amount,String custid,long accno,long balance,int transId){
+
+        this.transamount = amount;
+        this.transType = "Debit";
 
         balance = balance - amount;
 
@@ -29,11 +33,14 @@ public class customerTransactions extends bankCustomer {
         this.custIdacc = custid;
         this.transactionId = transId;
 
-        System.out.println("in create");
+        //System.out.println("in create");
     }
 
 
     public long custCredit(long amount,String custid,long accno,long balance,int transId){
+
+        this.transamount = amount;
+        this.transType = "Credit";
 
         balance = balance + amount;
 
@@ -43,11 +50,13 @@ public class customerTransactions extends bankCustomer {
 
     }
 
-    public void getAccountStatement(String custId,int tranId){
+    public void getAccountStatement(String custId,long accno){
 
-        if((this.custIdacc).equals(custId) && (this.transactionId == tranId) ){
+        if((this.custIdacc).equals(custId) && (this.accNo == accno) ){
 
-            System.out.println(this.getCustIdacc()+this.acctbalance+this.accType);
+            System.out.println("Transaction Id " + this.getTransactionId() +
+                    " Account No " + this.accNo + " Balance is " + this.acctbalance
+                    + " " + this.transType + " " + this.transamount);
 
 
         }
