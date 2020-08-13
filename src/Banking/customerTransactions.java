@@ -43,6 +43,17 @@ public class customerTransactions extends bankCustomer {
 
     }
 
+    public void getAccountStatement(String custId,int tranId){
+
+        if((this.custIdacc).equals(custId) && (this.transactionId == tranId) ){
+
+            System.out.println(this.getCustIdacc()+this.acctbalance+this.accType);
+
+
+        }
+
+    }
+
     public long getTransactionId() {
         return transactionId;
     }

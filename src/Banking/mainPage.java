@@ -133,7 +133,6 @@ public class mainPage {
                                 test1 = acct[ix].searchAcct(cust_id,accnumber);
 
                                 //System.out.println("inside for loop");
-
                                 if(test1){
 
                                     long balance = acct[ix].getAccBalance(cust_id,accnumber);
@@ -151,11 +150,19 @@ public class mainPage {
                             }
                             break;
                         case 3:
-
-                            System.out.println(custra[0].getTransactionId());
-                            System.out.println(custra[1].getTransactionId());
-
                             //call account statement
+
+                            System.out.println("Enter TransId");
+
+                            int trans = scan.nextInt();
+
+                            //for(int h =0;  )
+
+
+                            /*System.out.println(custra[0].getTransactionId());
+                            System.out.println(custra[1].getTransactionId());*/
+
+
                             break;
                         default:
 
@@ -175,7 +182,8 @@ public class mainPage {
 
                     System.out.println("Select One of the Options\n");
 
-                    System.out.println("(1) Add Customer\n(2) Add Account to Existing Customer\n");
+                    System.out.println("(1) Add Customer\n(2) Add Account to Existing Customer\n " +
+                            "(3) Exit");
 
                     emp_option = scan.nextByte();
 
