@@ -11,5 +11,5 @@ so one has to select employee option and create a customer and add account as pr
 
 then you can exit back to main menu and select customer 
 
-follow as prompted and conducts transactions and view your account statement for each account
+follow as prompted and perform transactions and view your account statement for each account
 
