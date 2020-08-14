@@ -8,6 +8,7 @@ public class customerTransactions extends bankCustomer {
 
     private long transactionId;
     private LocalDate date;
+    private String date1;
     private String custIdacc;
     private long accType;
     private long accNo;
@@ -43,7 +44,7 @@ public class customerTransactions extends bankCustomer {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd");
         LocalDate now = LocalDate.now();
         this.date = now;
-
+        this.date1 = dtf.format(now);
         System.out.println(dtf.format(now));
 
         //System.out.println("in create");
