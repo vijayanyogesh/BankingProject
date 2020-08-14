@@ -15,24 +15,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85e2811-daec-411f-92c8-25fa34ce661a" name="Default Changelist" comment="updated gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/bankCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/bankCustomer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/createAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerCreate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerTransactions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/customerTransactions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/genericCustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/goldCustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/goldMember.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/mainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankingProject/Banking/mainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankingProject/Banking/silverCustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banking/bankCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/bankCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banking/customerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/customerAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banking/customerTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/customerTransactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banking/mainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banking/mainPage.java" afterDir="false" />
-    </list>
+    <list default="true" id="b85e2811-daec-411f-92c8-25fa34ce661a" name="Default Changelist" comment="added comments for classes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.mainPage" />
-        <item itemvalue="Application.testing" />
         <item itemvalue="Application.testing" />
         <item itemvalue="Application.mainPage" />
         <item itemvalue="Application.mainPage" />
+        <item itemvalue="Application.testing" />
+        <item itemvalue="Application.testing" />
       </list>
     </recent_temporary>
   </component>

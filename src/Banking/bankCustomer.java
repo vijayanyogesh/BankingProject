@@ -81,7 +81,7 @@ public class bankCustomer {
     }
 
     //Method to add customer
-    public void createAccount(int index) {
+    public void createCustomer(int index) {
 
         Scanner scan = new Scanner(System.in);
 

@@ -51,11 +51,11 @@ public class mainPage {
                     byte flag = 0;
                     String cust_id;
                     long accnumber = 0;
-
+                        //ask user to enter customer id
                         System.out.println("Please enter your Customer ID\n");
                         cust_id = scan.next();
                         boolean found = false;
-
+                        //check if entered customer id is present
                         for (int k = 0; k < i; k++) {
 
                             //check if the entered custid exists if not throw error
@@ -64,7 +64,7 @@ public class mainPage {
 
                             if (found) {
                                 System.out.println("Welcome " + cust[k].getName());
-
+                                //get the user's account number for withdrawal or deposit
                                 System.out.println("Enter Account Number");
 
                                 accnumber = scan.nextLong();
@@ -73,14 +73,13 @@ public class mainPage {
 
                                 break;
                             } else {
+                                //error thrown if no matching cust id
                                 System.out.println("No Such ID enter again");
                                 break;
                             }
 
                         }
-
-                    //}while(flag != 1);
-                    System.out.println("Select One of the Options\n");
+                        System.out.println("Select One of the Options\n");
                     //if customerid is correct choose one of the options
                     System.out.println("(1) Withdraw\n(2) Deposit\n(3) Account Statement\n(4) Exit");
 
@@ -187,7 +186,7 @@ public class mainPage {
                             //create new object bankcustome at ith location and create an account
                             cust[i] = new bankCustomer();
 
-                            cust[i].createAccount(i);
+                            cust[i].createCustomer(i);
 
                             cust[i].display();
 
