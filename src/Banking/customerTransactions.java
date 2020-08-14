@@ -43,6 +43,7 @@ public class customerTransactions extends bankCustomer {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd");
         LocalDate now = LocalDate.now();
         this.date = now;
+
         System.out.println(dtf.format(now));
 
         //System.out.println("in create");
