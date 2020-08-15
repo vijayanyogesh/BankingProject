@@ -45,7 +45,7 @@ public class customerTransactions extends bankCustomer {
         LocalDate now = LocalDate.now();
         this.date = now;
         this.date1 = dtf.format(now);
-        System.out.println(dtf.format(now));
+        System.out.println(date1);
 
         //System.out.println("in create");
     }

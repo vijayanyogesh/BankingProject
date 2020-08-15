@@ -1,6 +1,7 @@
 package Banking;
 
 import java.sql.SQLOutput;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -152,6 +153,11 @@ public class mainPage {
                             //call Display accountstatement method recursively for
                             //if the condition is met
 
+                            System.out.println("Enter From Date\n");
+                            System.out.println("Enter To Date\n");
+
+                            //Date from = scan.nextDate();
+
                             //System.out.println(y);
                             for(int ac =0 ; ac < y ; ac++){
                                 custra[ac].getAccountStatement(cust_id,accnumber);
@@ -183,7 +189,7 @@ public class mainPage {
                     switch (emp_option) {
 
                         case 1:
-                            //create new object bankcustome at ith location and create an account
+                            //create new object bankcustomer at ith location and create an account
                             cust[i] = new bankCustomer();
 
                             cust[i].createCustomer(i);
